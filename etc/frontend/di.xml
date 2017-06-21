@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Page Preview Extension for Magento 2
+ *
+ * @author     Volodymyr Konstanchuk http://konstanchuk.com
+ * @copyright  Copyright (c) 2017 The authors
+ * @license    http://www.opensource.org/licenses/mit-license.html  MIT License
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- cms page start -->
+    <preference for="Magento\Cms\Model\ResourceModel\Page"
+                type="Konstanchuk\PagePreview\Model\Cms\Model\ResourceModel\Page" />
+    <!-- cms page end -->
+    <!-- product page start -->
+    <type name="Magento\Catalog\Helper\Product">
+        <plugin name="konstanchuk_page_preview_product_helper"
+                type="Konstanchuk\PagePreview\Plugin\Catalog\Helper\Product"
+                sortOrder="10"
+                disabled="false"/>
+    </type>
+    <!-- product page end -->
+    <!-- category page start -->
+    <type name="Magento\Catalog\Helper\Category">
+        <plugin name="konstanchuk_page_preview_category_helper"
+                type="Konstanchuk\PagePreview\Plugin\Catalog\Helper\Category"
+                sortOrder="10"
+                disabled="false"/>
+    </type>
+    <!-- category page end -->
+</config>

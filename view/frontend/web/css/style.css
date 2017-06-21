@@ -1,0 +1,56 @@
+/**
+ * Page Preview Extension for Magento 2
+ *
+ * @author     Volodymyr Konstanchuk http://konstanchuk.com
+ * @copyright  Copyright (c) 2017 The authors
+ * @license    http://www.opensource.org/licenses/mit-license.html  MIT License
+ */
+.konstanchuk-page-preview {
+  height: 40px;
+  position: fixed;
+  top: 0;
+  background-color: #dd4b39;
+  width: 100%;
+  z-index: 10000;
+  color: white;
+  direction: ltr;
+  border-bottom: 1px solid #b93120;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Open Sans, Helvetica Neue, sans-serif;
+}
+.konstanchuk-page-preview .page-preview-inner {
+  max-width: 1212px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+.konstanchuk-page-preview .page-preview-inner > div {
+  display: inline-block;
+  line-height: 40px;
+}
+.konstanchuk-page-preview .page-preview-title {
+  font-size: 22px;
+  font-weight: bold;
+  float: left;
+}
+.konstanchuk-page-preview .page-preview-actions {
+  float: right;
+}
+.konstanchuk-page-preview .page-preview-actions a {
+  display: inline-block;
+  padding: 0 10px;
+  text-decoration: none;
+  color: white;
+  min-width: 25px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+}
+.konstanchuk-page-preview .page-preview-actions a:hover {
+  background-color: #b93120;
+}
+.konstanchuk-page-preview .page-preview-close {
+  font-weight: bold;
+}
+body.konstanchuk-page-preview-body {
+  margin-top: 40px;
+}

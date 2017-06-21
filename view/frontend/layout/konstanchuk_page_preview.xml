@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Konstanchuk_PagePreview::css/style.css" />
+    </head>
+    <body>
+        <referenceBlock name="before.body.end">
+            <block class="Konstanchuk\PagePreview\Block\Info"
+                   name="konstanchuk_page_preview_info"
+                   cacheable="false"
+                   template="Konstanchuk_PagePreview::info.phtml" />
+        </referenceBlock>
+    </body>
+</page>
